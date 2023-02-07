@@ -17,6 +17,7 @@ const Login = () => {
     margin-bottom: 25px;
     color: #525252;
     font-weight: 300;
+    font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
 `;
 
     const StyledList = styled(List)`
@@ -30,16 +31,16 @@ const Login = () => {
 `;
 
     const QRCOde = styled('img')({
-        margin: '50px 0 0 50px',
+        margin: '50px 0 0 90px',
         height: 264,
         width: 264
     });
 
     const dialogStyle = {
-        marginTop: '10%',
+        marginTop: '12%',
         height: '90%',
-        width: '60%',
-        maxWidth: '100',
+        width: '90%',
+        maxWidth: '200',
         maxHeight: '100%',
 
     }
