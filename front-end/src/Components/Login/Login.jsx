@@ -2,9 +2,10 @@ import React from 'react'
 import { Dialog, Box, Typography, List, styled, ListItem } from "@mui/material"
 
 import QRCodeImage from "../assets/WhatsAppQRCode.png"
+import { GoogleLogin } from '@react-oauth/google';
 
-const Login = () => {
-    const Component = styled(Box)`
+
+const Component = styled(Box)`
     display: flex; 
 `;
 
@@ -44,6 +45,17 @@ const Login = () => {
         maxHeight: '100%',
 
     }
+
+const Login = () => {
+    
+
+    const loginSuccess =(res)=>{
+        console.log(res)
+    }
+
+    const loginFailure =(res)=>{
+        console.log("Login failed", res)
+    }
     return (
         <>
             <Dialog
@@ -62,7 +74,17 @@ const Login = () => {
                             <ListItem>4. Point your phone to this screen to capture the code</ListItem>
                         </StyledList>
                     </Container>
+                    <Box style={{position:'relative'}}>
                     <QRCOde src={QRCodeImage} alt='QR Code' />
+                    <Box style={{position: 'absolute', top: '50%', transform: 'translateX(70%) translateY(-50%)'}}>
+                        
+                            <GoogleLogin
+                                buttonText=""
+                                onSuccess={loginSuccess}
+                                onError={loginFailure}
+                            /> 
+                    </Box>
+                    </Box>
                 </Component>
             </Dialog>
         </>
