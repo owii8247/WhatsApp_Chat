@@ -1,5 +1,6 @@
 
 import './App.css';
+import { AuthProvider } from './Components/Context/AuthContext';
 import Home from './Components/Home/Home';
 
 import { GoogleOAuthProvider } from '@react-oauth/google';
@@ -11,7 +12,9 @@ function App() {
   return (
     <div className="App">
       <GoogleOAuthProvider clientId={clientId}>
-      <Home />
+        <AuthProvider>
+          <Home />
+        </AuthProvider>
       </GoogleOAuthProvider>
     </div>
   );
