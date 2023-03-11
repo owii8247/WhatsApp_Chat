@@ -4,7 +4,7 @@ import { Dialog, Box, Typography, List, styled, ListItem } from "@mui/material"
 import QRCodeImage from "../assets/WhatsAppQRCode.png"
 import { GoogleLogin } from '@react-oauth/google';
 import jwt_decode from "jwt-decode"
-import { AuthContext } from '../Context/AuthContext';
+import { AuthContext } from '../../Context/AuthContext';
 
 const Component = styled(Box)`
     display: flex; 

@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import Login from '../Login/Login'
 import { AppBar, Toolbar, Typography, styled, Box } from '@mui/material';
-import { AuthContext } from '../Context/AuthContext';
+
 import ChatBox from '../ChatBox/ChatBox';
+import { AuthContext } from '../../Context/AuthContext';
 
 
 const Component = styled(Box)`

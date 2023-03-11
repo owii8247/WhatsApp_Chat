@@ -1,6 +1,6 @@
 
 import './App.css';
-import { AuthProvider } from './Components/Context/AuthContext';
+import { AuthProvider } from './Context/AuthContext';
 import Home from './Components/Home/Home';
 
 import { GoogleOAuthProvider } from '@react-oauth/google';
